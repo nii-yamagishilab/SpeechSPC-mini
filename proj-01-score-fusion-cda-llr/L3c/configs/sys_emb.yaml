@@ -1,0 +1,232 @@
+# ################################
+# Model: SASV baseline
+# Authors: Xin Wang
+# ################################
+
+###
+# Basic parameters
+###
+# random seed
+seed: 1986
+__set_seed: !apply:torch.manual_seed [!ref <seed>]
+
+# folder to load configurations 
+# config_folder: configs
+
+# folder to save output models and results
+output_folder: !ref results/use_emb_<flag_use_embedding_input>/<seed>
+# save pretrained models here
+save_folder: !ref <output_folder>/save
+# save train log
+train_log: !ref <output_folder>/train_log.txt
+# save evaluation log
+eval_log: !ref <output_folder>/eval_log.txt
+# folder to dump scores for dev set
+analysis_dump_folder: !ref <output_folder>/analysis
+# folder to dump scores for evaluation set
+analysis_dump_eval_folder: !ref <output_folder>/analysis_eval
+
+###
+# meta label for SASV
+###
+tar_bonafide_label: 1
+nontar_bonafide_label: 2
+spoof_label: 0
+
+###
+# Data configuration
+###
+# Load pre-trained embeddings?
+# If True, code will load the pre-computed embedding vectors
+# If False, code will load waveform and compute embedding vectors
+#  every time. 
+flag_use_embedding_input: True
+
+# Root folder to put required protocol and file lists
+#  the default settings assumes the following structure
+#  |- csv
+#  |   |- train_new.csv: the csv list required by speechbrain I/O for training set
+#  |   |- dev.csv: the csv list required by speechbrain I/O for dev set
+#  |   |- eval.csv: the csv list required by speechbrain I/O for dev set
+#  |- protocols (official protocols of ASVspoof 2019)
+#  |   |- ASVspoof2019_LA_asv_protocols
+#  |   |   |- ASVspoof2019.LA.asv.dev.female.trn.txt
+#  |   |   |- ASVspoof2019.LA.asv.dev.male.trn.txt 
+#  |   |   |- ...
+#  |   |- ASVspoof2019_LA_cm_protocols
+#  |       |- ASVspoof2019.LA.cm.train.trl.txt
+#  |       |- ASVspoof2019.LA.cm.dev.trl.txt
+#  |       |- ...
+#  |- weights
+#  |   |- assist_pretrained.pth : pre-trained AASIST model from SASV2022 baseline 
+#  |   |- ecapa_pretrained.model: pre-trained ECAPA model from SASV2022 baseline 
+#  |      see https://github.com/sasv-challenge/SASVC2022_Baseline
+#  |-  embeddings      
+#      |- asv_embd_trn.pk       : speaker embeddings for train set utterances, by pre-trained ECAPA  
+#      |- asv_embd_dev.pk       : for dev set
+#      |- asv_embd_eval.pk      : for eval set
+#      |- cm_embd_trn.pk        : CM embeddings for train set utterances, by pre-trained AASIST
+#      |- cm_embd_dev.pk        : for dev set
+#      |- cm_embd_eval.pk       : for eval set
+#      |- spk_model_asv_dev.pk  : speaker embed. for dev set speaker enrollment, by pre-trained ECAPA
+#      |- spk_model_asv_eval.pk : for eval set speaker enrollment
+#      |- spk_model_cm_dev.pk   : CM embed. for dev set speaker enrollment, by pre-trained AASIST
+#      |- spk_model_cm_eval.pk  : for eval set speaker enrollment
+#         These embeddings were extracted using https://github.com/sasv-challenge/SASVC2022_Baseline
+#         They are mainly for accelerating the experiment speed --- we don't need to
+#         re-extract the embedding vectors for each utterance in each training epoch.
+#         If you don't use pre-trained embeddings. set flag_use_embedding_input: False
+# 
+# The path of the folder will be specified through commandline
+#  You can also fill in the path to the data folder here
+data_folder: Null
+
+# csv files
+path_train_csv: !ref <data_folder>/csv/train_new.csv
+path_dev_csv: !ref <data_folder>/csv/dev.csv
+path_eval_csv: !ref <data_folder>/csv/eval.csv
+
+# Protocol files
+protocol_asv_folder: !ref <data_folder>/protocols/ASVspoof2019_LA_asv_protocols
+protocol_cm_folder: !ref <data_folder>/protocols/ASVspoof2019_LA_cm_protocols
+path_dev_enroll_f_list: !ref <protocol_asv_folder>/ASVspoof2019.LA.asv.dev.female.trn.txt
+path_dev_enroll_m_list: !ref <protocol_asv_folder>/ASVspoof2019.LA.asv.dev.male.trn.txt
+path_eval_enroll_f_list: !ref <protocol_asv_folder>/ASVspoof2019.LA.asv.eval.female.trn.txt
+path_eval_enroll_m_list: !ref <protocol_asv_folder>/ASVspoof2019.LA.asv.eval.male.trn.txt
+
+# Pretrained front-end model ECAPA and AASIST
+weight_folder: !ref <data_folder>/weights
+path_aasist: !ref <weight_folder>/assist_pretrained.pth  
+path_ecapa: !ref <weight_folder>/ecapa_pretrained.model
+
+# Folder to extract data augmentation files
+emb_folder: !ref <data_folder>/embeddings
+path_asv_emb_trn: !ref <emb_folder>/asv_embd_trn.pk
+path_cm_emb_trn: !ref <emb_folder>/cm_embd_trn.pk
+
+path_asv_emb_dev: !ref <emb_folder>/asv_embd_dev.pk
+path_cm_emb_dev: !ref <emb_folder>/cm_embd_dev.pk
+path_asv_spk_enrol_dev: !ref <emb_folder>/spk_model_asv_dev.pk
+path_cm_spk_enrol_dev: !ref <emb_folder>/spk_model_cm_dev.pk
+
+path_asv_emb_eval: !ref <emb_folder>/asv_embd_eval.pk
+path_cm_emb_eval: !ref <emb_folder>/cm_embd_eval.pk
+path_asv_spk_enrol_eval: !ref <emb_folder>/spk_model_asv_eval.pk
+path_cm_spk_enrol_eval: !ref <emb_folder>/spk_model_cm_eval.pk
+
+# Audio root directory
+#  If flag_use_embedding_inputs == False, the code needs to load audios from ASVspoof 2019
+#  Please download ASVspoof2019 dataset from https://datashare.ed.ac.uk/handle/10283/3336
+#  It should has the following structure
+#  <path_audio_root>
+#   |- ASVspoof2019_LA_train/flac
+#   |- ASVspoof2019_LA_dev/flac
+#   |- ASVspoof2019_LA_eval/flac
+#   
+path_audio_root: Null
+
+
+### 
+# Training configuration
+###
+
+# these are inherited from speechbrain recipe. I think they are not used
+split_ratio: [90, 10]
+skip_prep: False
+ckpt_interval_minutes: 15 # save checkpoint every N min
+sentence_len: 3.0 
+
+
+# Training parameters
+number_of_epochs: 10
+batch_size: 24
+lr: 0.00005
+base_lr: 0.00005
+max_lr: !ref <lr>
+step_size: 65000
+sample_rate: 16000
+shuffle: True
+random_chunk: True
+
+# Feature parameters
+# These two are not used I think, keep it for record
+input_dim: 544
+output_dim: 2
+
+
+# Data loading options
+#  maximum length of audio loaded when computing features
+#  this is used only when flag_use_embedding_input == False
+audio_max_len: 64600
+
+
+dataloader_options:
+    batch_size: !ref <batch_size>
+    shuffle: !ref <shuffle>
+    num_workers: 4
+
+dataloader_dev_options:
+    batch_size: !ref <batch_size>
+    shuffle: False
+    num_workers: 4
+    collate_fn: !name:tools.util_torch.PaddedBatch_customize
+
+dataloader_eval_options:
+    batch_size: !ref <batch_size>
+    shuffle: False
+    num_workers: 4
+    collate_fn: !name:tools.util_torch.PaddedBatch_customize
+
+# Functions
+epoch_counter: !new:speechbrain.utils.epoch_loop.EpochCounter
+    limit: !ref <number_of_epochs>
+
+opt_class: !name:torch.optim.Adam
+    lr: !ref <lr>
+    weight_decay: 0.001
+
+lr_annealing: !new:speechbrain.nnet.schedulers.LinearScheduler
+    initial_value: !ref <lr>
+    final_value: !ref <base_lr>
+    epoch_count: !ref <number_of_epochs>
+
+# Logging + checkpoints
+train_logger: !new:speechbrain.utils.train_logger.FileTrainLogger
+    save_file: !ref <train_log>
+
+eval_logger: !new:speechbrain.utils.train_logger.FileTrainLogger
+    save_file: !ref <eval_log>
+
+error_stats: !name:speechbrain.utils.metric_stats.MetricStats
+    metric: !name:speechbrain.nnet.losses.classification_error
+        reduction: batch
+
+checkpointer: !new:speechbrain.utils.checkpoints.Checkpointer
+    checkpoints_dir: !ref <save_folder>
+
+
+# model configuration
+#  configurations adopted from SASV2022 baseline
+model_config:
+    frontend_config:
+        frontend_use_embedding_input: !ref <flag_use_embedding_input>
+        cm_config: 
+            architecture: AASIST
+            nb_samp: 64600
+            first_conv: 128
+            filts: [70, [1, 32], [32, 32], [32, 64], [64, 64]]
+            gat_dims: [64, 32]
+            pool_ratios: [0.5, 0.7, 0.5, 0.5]
+            temperatures: [2.0, 2.0, 100.0, 100.0]
+            asv_config: null
+            emb_dim: 160
+        asv_config:
+            architecture: ECAPA_TDN
+            ch: 1024
+            emb_dim: 192
+        update: False
+        cm_pretrn: !ref <path_aasist>
+        asv_pretrn: !ref <path_ecapa>
+    backend_config:
+        cm_emb_dim: !ref <model_config[frontend_config][cm_config][emb_dim]>
+        asv_emb_dim: !ref <model_config[frontend_config][asv_config][emb_dim]>

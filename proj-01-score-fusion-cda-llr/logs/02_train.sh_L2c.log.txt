@@ -1,0 +1,59 @@
+torchvision is not available - cannot save figures
+speechbrain.core - Beginning experiment!
+speechbrain.core - Experiment folder: results/use_emb_True/1986
+speechbrain.core - Info: ckpt_interval_minutes arg from hparam file is used
+speechbrain.core - 82.5k trainable parameters in SASVBaseline
+speechbrain.utils.checkpoints - Would load a checkpoint here, but none found yet.
+speechbrain.utils.epoch_loop - Going into epoch 1
+SASVEER: 13.87, ASVEER: 36.59, CMEER: 0.07
+speechbrain.utils.train_logger - epoch: 1 - valid sasv_eer: 1.39e-01, valid sv_eer: 3.66e-01, valid cm_eer: 6.73e-04
+speechbrain.utils.checkpoints - Saving an empty state_dict for FrontEnd() in results/use_emb_True/1986/save/CKPT+2024-06-08+15-59-16+00/frontend.ckpt.
+speechbrain.utils.checkpoints - Saved an end-of-epoch checkpoint in results/use_emb_True/1986/save/CKPT+2024-06-08+15-59-16+00
+speechbrain.utils.epoch_loop - Going into epoch 2
+SASVEER: 14.02, ASVEER: 37.33, CMEER: 0.07
+speechbrain.utils.train_logger - epoch: 2 - valid sasv_eer: 1.40e-01, valid sv_eer: 3.73e-01, valid cm_eer: 6.73e-04
+speechbrain.utils.checkpoints - Saving an empty state_dict for FrontEnd() in results/use_emb_True/1986/save/CKPT+2024-06-08+15-59-35+00/frontend.ckpt.
+speechbrain.utils.checkpoints - Saved an end-of-epoch checkpoint in results/use_emb_True/1986/save/CKPT+2024-06-08+15-59-35+00
+speechbrain.utils.epoch_loop - Going into epoch 3
+SASVEER: 14.14, ASVEER: 37.87, CMEER: 0.07
+speechbrain.utils.train_logger - epoch: 3 - valid sasv_eer: 1.41e-01, valid sv_eer: 3.79e-01, valid cm_eer: 6.73e-04
+speechbrain.utils.checkpoints - Saving an empty state_dict for FrontEnd() in results/use_emb_True/1986/save/CKPT+2024-06-08+15-59-54+00/frontend.ckpt.
+speechbrain.utils.checkpoints - Saved an end-of-epoch checkpoint in results/use_emb_True/1986/save/CKPT+2024-06-08+15-59-54+00
+speechbrain.utils.epoch_loop - Going into epoch 4
+SASVEER: 14.15, ASVEER: 38.20, CMEER: 0.07
+speechbrain.utils.train_logger - epoch: 4 - valid sasv_eer: 1.42e-01, valid sv_eer: 3.82e-01, valid cm_eer: 6.73e-04
+speechbrain.utils.checkpoints - Saving an empty state_dict for FrontEnd() in results/use_emb_True/1986/save/CKPT+2024-06-08+16-00-14+00/frontend.ckpt.
+speechbrain.utils.checkpoints - Saved an end-of-epoch checkpoint in results/use_emb_True/1986/save/CKPT+2024-06-08+16-00-14+00
+speechbrain.utils.epoch_loop - Going into epoch 5
+SASVEER: 14.22, ASVEER: 38.40, CMEER: 0.07
+speechbrain.utils.train_logger - epoch: 5 - valid sasv_eer: 1.42e-01, valid sv_eer: 3.84e-01, valid cm_eer: 6.73e-04
+speechbrain.utils.checkpoints - Saving an empty state_dict for FrontEnd() in results/use_emb_True/1986/save/CKPT+2024-06-08+16-00-33+00/frontend.ckpt.
+speechbrain.utils.checkpoints - Saved an end-of-epoch checkpoint in results/use_emb_True/1986/save/CKPT+2024-06-08+16-00-33+00
+speechbrain.utils.epoch_loop - Going into epoch 6
+SASVEER: 14.23, ASVEER: 38.35, CMEER: 0.07
+speechbrain.utils.train_logger - epoch: 6 - valid sasv_eer: 1.42e-01, valid sv_eer: 3.83e-01, valid cm_eer: 6.73e-04
+speechbrain.utils.checkpoints - Saving an empty state_dict for FrontEnd() in results/use_emb_True/1986/save/CKPT+2024-06-08+16-00-53+00/frontend.ckpt.
+speechbrain.utils.checkpoints - Saved an end-of-epoch checkpoint in results/use_emb_True/1986/save/CKPT+2024-06-08+16-00-53+00
+speechbrain.utils.epoch_loop - Going into epoch 7
+SASVEER: 14.35, ASVEER: 38.48, CMEER: 0.07
+speechbrain.utils.train_logger - epoch: 7 - valid sasv_eer: 1.44e-01, valid sv_eer: 3.85e-01, valid cm_eer: 7.18e-04
+speechbrain.utils.checkpoints - Saving an empty state_dict for FrontEnd() in results/use_emb_True/1986/save/CKPT+2024-06-08+16-01-12+00/frontend.ckpt.
+speechbrain.utils.checkpoints - Saved an end-of-epoch checkpoint in results/use_emb_True/1986/save/CKPT+2024-06-08+16-01-12+00
+speechbrain.utils.epoch_loop - Going into epoch 8
+SASVEER: 14.29, ASVEER: 38.94, CMEER: 0.07
+speechbrain.utils.train_logger - epoch: 8 - valid sasv_eer: 1.43e-01, valid sv_eer: 3.89e-01, valid cm_eer: 6.73e-04
+speechbrain.utils.checkpoints - Saving an empty state_dict for FrontEnd() in results/use_emb_True/1986/save/CKPT+2024-06-08+16-01-32+00/frontend.ckpt.
+speechbrain.utils.checkpoints - Saved an end-of-epoch checkpoint in results/use_emb_True/1986/save/CKPT+2024-06-08+16-01-32+00
+speechbrain.utils.epoch_loop - Going into epoch 9
+SASVEER: 14.23, ASVEER: 38.47, CMEER: 0.07
+speechbrain.utils.train_logger - epoch: 9 - valid sasv_eer: 1.42e-01, valid sv_eer: 3.85e-01, valid cm_eer: 6.73e-04
+speechbrain.utils.checkpoints - Saving an empty state_dict for FrontEnd() in results/use_emb_True/1986/save/CKPT+2024-06-08+16-01-51+00/frontend.ckpt.
+speechbrain.utils.checkpoints - Saved an end-of-epoch checkpoint in results/use_emb_True/1986/save/CKPT+2024-06-08+16-01-51+00
+speechbrain.utils.epoch_loop - Going into epoch 10
+SASVEER: 14.35, ASVEER: 39.01, CMEER: 0.07
+speechbrain.utils.train_logger - epoch: 10 - valid sasv_eer: 1.44e-01, valid sv_eer: 3.90e-01, valid cm_eer: 6.73e-04
+speechbrain.utils.checkpoints - Saving an empty state_dict for FrontEnd() in results/use_emb_True/1986/save/CKPT+2024-06-08+16-02-10+00/frontend.ckpt.
+speechbrain.utils.checkpoints - Saved an end-of-epoch checkpoint in results/use_emb_True/1986/save/CKPT+2024-06-08+16-02-10+00
+SASVEER: 1.58, ASVEER: 2.16, CMEER: 0.95
+speechbrain.utils.train_logger -  - test sasv_eer: 1.58e-02, test sv_eer: 2.16e-02, test cm_eer: 9.50e-03
+Training finished.
