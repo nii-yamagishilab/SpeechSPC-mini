@@ -1,0 +1,8 @@
+torchvision is not available - cannot save figures
+speechbrain.core - Beginning experiment!
+speechbrain.core - Experiment folder: results/use_emb_True/1986
+speechbrain.core - Info: ckpt_interval_minutes arg from hparam file is used
+speechbrain.core - 82.5k trainable parameters in SASVBaseline
+SASVEER: 13.87, ASVEER: 36.59, CMEER: 0.07
+SASVEER: 20.61, ASVEER: 38.73, CMEER: 0.65
+Scores have been extracted for dev and evaluation sets.
