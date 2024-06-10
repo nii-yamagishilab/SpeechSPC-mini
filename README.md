@@ -12,18 +12,24 @@ This repository is maintained by [Xin Wang](http://tonywangx.github.io/), for [J
 
 The decorator `mini` means that this repository is not a Pro collection of speech security and privacy tools. 
 
-XW is a beginner to this field. Please feel free to give suggestions and feedback.
+XW is a beginner in this field. Please feel free to give suggestions and feedback.
 
 
 ## Projects
 
-### 1. Score-level fusion 
+### 1. Score-level fusion for spoofing-aware ASV
 
-This project is for an Interspeech 2024 paper 
-*Revisiting and Improving Scoring Fusion for Spoofing-aware Speaker Verification Using Compositional Data Analysis*
+<p align="center">
+  <img src="https://github.com/TonyWangX/TonyWangX.github.io/blob/9c46ee65c8ca0a34f16c926c87661b682aaaba31/code/source/pic/llr_fusion.png?raw=true" width="300px" alt="Project Logo"/>
+</p>
 
+This project is for an Interspeech 2024 paper: 
 
-* Summary: for spoofing-aware ASV, how should we fuse the scores from a spoofing countermeasure and a conventional ASV?
+**Revisiting and Improving Scoring Fusion for Spoofing-aware Speaker Verification Using Compositional Data Analysis**
+
+Summary:
+
+* For spoofing-aware ASV, how should we fuse the scores from a spoofing countermeasure and a conventional ASV?
     * This work shows how score summation is linked to the compositional data analysis.
     * This work shows how a non-linear score fusion theoretically optimizes a Bayesian decision cost -- better than score summation.
 
@@ -35,7 +41,7 @@ This project is for an Interspeech 2024 paper
     * Tutorial notebook on fusion of simulated data (link to be inserted)
     * Tutorial notebook on evaluation metrics (t-EER, cllr, and so on)
 
-Please consider cite the paper if you find the above materials useful
+Please consider citing the paper if you find the above materials useful
 ```bibtex
 @inproceedings{wangRevisiting2024,
   title = {Revisiting and {{Improving Scoring Fusion}} for {{Spoofing-aware Speaker Verification Using Compositional Data Analysis}}},
@@ -55,14 +61,28 @@ This repository also hosts tutorial notebooks. Some of them are mentioned in ind
 | --- | :-- | :-- |
 | [b1_neural_vocoder](./tutorials/b1_neural_vocoder) | readable and executable | tutorials on selected neural vocoders
 | [b2_anti_spoofing](./tutorials/b2_anti_spoofing) | partially finished | tutorials on [speech anti-spoofing](https://www.asvspoof.org/) 
-| [b3_voice_privacy](./tutorials/b3_voiceprivacy_ch) | readable and executable | tutorials on [speaker anonymization](https://www.voiceprivacychallenge.org/) basic methodss
+| [b3_voice_privacy](./tutorials/b3_voiceprivacy_ch) | readable and executable | tutorials on [speaker anonymization](https://www.voiceprivacychallenge.org/) basic methods
 
-These tutorials are based on Google Colab also linked in XW's [PytorchNN repository](https://github.com/nii-yamagishilab/project-NN-Pytorch-scripts/tree/master/tutorials)
+These tutorials are based on Google Colab and also linked in XW's [PytorchNN repository](https://github.com/nii-yamagishilab/project-NN-Pytorch-scripts/tree/master/tutorials)
 
 
-## Acknowledgement
+## Acknowledgment
 
 This work is supported by JST PRESTO Grant Number JPMJPR23P9, Japan.
 
 ---
-©2024, Wang Xin
+```bash
+Copyright 2024 Wang Xin
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+```

@@ -1,4 +1,10 @@
+
 # Score-level fusion for Spoofing-aware ASV
+
+
+<p align="center">
+  <img src="https://github.com/TonyWangX/TonyWangX.github.io/blob/9c46ee65c8ca0a34f16c926c87661b682aaaba31/code/source/pic/llr_fusion.png?raw=true" width="300px" alt="Project Logo"/>
+</p>
 
 This is the code repository for the following paper
 
@@ -139,10 +145,11 @@ Do the same in `03_get_score.sh`.
 ```
 
 Note that
-* All the systems have the same sub-folder structure.
+* All the systems have the same sub-folder structure
 * `DATA` is downloaded by `01_download.sh`
 * `results` is created after running `02_train.sh`
 * `analysis` and `analysis_eval` are created after running `03_get_score.sh`
+* Folder with a `*` mark with will generated after running the scripts
 
 # Cite the paper
 
