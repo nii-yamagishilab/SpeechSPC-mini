@@ -3,7 +3,7 @@
 
 
 <p align="center">
-  <img src="https://github.com/TonyWangX/TonyWangX.github.io/blob/9c46ee65c8ca0a34f16c926c87661b682aaaba31/code/source/pic/llr_fusion.png?raw=true" width="300px" alt="Project Logo"/>
+  <img src="https://github.com/TonyWangX/TonyWangX.github.io/blob/9c46ee65c8ca0a34f16c926c87661b682aaaba31/code/source/pic/llr_fusion.png?raw=true" width="300px" align="left" alt="Project Logo"/>
 </p>
 
 This is the code repository for the following paper
@@ -14,11 +14,11 @@ Xin Wang, Tomi Kinnunen, Lee Kong Aik, Paul-Gauthier Noe, and Junichi Yamagishi.
 
 ## Resources
 
-* Appendix on the proof of the theory related to Bayesian decision cost can be found here (link to be inserted)
+* Appendix on the proof of the theory related to Bayesian decision cost can be found [here](https://www.dropbox.com/scl/fo/ykbnw4t8u09vbl9zyir4l/APrQUbOPPIQSHGpnLtdem3o/misc/is2024-sasv.pdf?rlkey=1at87m1q157rlcx4jo933pxeb)
   * This appendix explains how the optimal score fusion w.r.t a specific Bayesian decision cost is derived.
   * It is based on my beginner's point of view on the theory. It should be easy to digest.
-* Tutorial demo on fusion of simulated data can be found here (link to be inserted)
-* Tutorial on evaluation metrics (t-EER, cllr, and so on) can be found here (link to be inserted)
+* Tutorial demo on fusion of simulated data can be found here (to be added)
+* Tutorial on evaluation metrics (t-EER, cllr, and so on) can be found here (to be added)
 
 ## Python environment
 

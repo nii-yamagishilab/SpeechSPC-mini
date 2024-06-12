@@ -20,7 +20,7 @@ XW is a beginner in this field. Please feel free to give suggestions and feedbac
 ### 1. Score-level fusion for spoofing-aware ASV
 
 <p align="center">
-  <img src="https://github.com/TonyWangX/TonyWangX.github.io/blob/9c46ee65c8ca0a34f16c926c87661b682aaaba31/code/source/pic/llr_fusion.png?raw=true" width="300px" alt="Project Logo"/>
+  <img src="https://github.com/TonyWangX/TonyWangX.github.io/blob/9c46ee65c8ca0a34f16c926c87661b682aaaba31/code/source/pic/llr_fusion.png?raw=true" width="300px" align="left" alt="Project Logo"/>
 </p>
 
 This project is for an Interspeech 2024 paper: 
@@ -37,9 +37,9 @@ Summary:
     * Please follow `README` in the folder and run the code
     
 * Other resources:
-    * Proof of the theory related to Bayesian decision cost (link to be inserted)
-    * Tutorial notebook on fusion of simulated data (link to be inserted)
-    * Tutorial notebook on evaluation metrics (t-EER, cllr, and so on)
+    * Proof of the theory related to Bayesian decision cost [here](https://www.dropbox.com/scl/fo/ykbnw4t8u09vbl9zyir4l/APrQUbOPPIQSHGpnLtdem3o/misc/is2024-sasv.pdf?rlkey=1at87m1q157rlcx4jo933pxeb)
+    * Tutorial notebook on fusion of simulated data (to be added)
+    * Tutorial notebook on evaluation metrics (to be added)
 
 Please consider citing the paper if you find the above materials useful
 ```bibtex
