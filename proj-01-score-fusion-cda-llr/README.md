@@ -2,15 +2,21 @@
 # Score-level fusion for Spoofing-aware ASV
 
 
-<p align="center">
-  <img src="https://github.com/TonyWangX/TonyWangX.github.io/blob/9c46ee65c8ca0a34f16c926c87661b682aaaba31/code/source/pic/llr_fusion.png?raw=true" width="300px" align="left" alt="Project Logo"/>
+<p align="left">
+  <img src="https://github.com/TonyWangX/TonyWangX.github.io/blob/9c46ee65c8ca0a34f16c926c87661b682aaaba31/code/source/pic/llr_fusion.png?raw=true" width="300px" alt="Project Logo"/>
 </p>
+<br>
 
 This is the code repository for the following paper
 
 ```
 Xin Wang, Tomi Kinnunen, Lee Kong Aik, Paul-Gauthier Noe, and Junichi Yamagishi. 2024. Revisiting and Improving Scoring Fusion for Spoofing-aware Speaker Verification Using Compositional Data Analysis. In Proc. Interspeech, page (accepted).
 ```
+
+## To do
+- [ ] More documentation on the code
+- [ ] Tutorial notebooks on fusion and evaluation metrics
+
 
 ## Resources
 
@@ -24,15 +30,20 @@ Xin Wang, Tomi Kinnunen, Lee Kong Aik, Paul-Gauthier Noe, and Junichi Yamagishi.
 
 1. [Speechbrain](https://github.com/speechbrain/speechbrain)
 2. [scikit-learn](https://scikit-learn.org/)
+3. [pandas](https://pandas.pydata.org/)
 
-Please follow their official website to install.  Their latest stable versions should work. 
+Try `00_install_env.sh`. This will install an environment called `sb` with speechbrain and related tools.
 
-The ones I used are
+
+Otherwise, please follow their official website to install. Their latest stable versions should work. The ones I used are
 ```bash
 Speechbrain: github commit 16ef03604b187ff1d926368963bfda09515a47f0
 
 scikit-learn: 1.3.2
+
+pandas: 2.0.3
 ```
+
 
 ## Quick start
 
@@ -72,7 +83,19 @@ Computing the metrics is a complicated topic by itself. A separate notebook will
 
 **Training logs**
 
-For reference, I put the logs from my experiments in `./logs`. Just a single run
+For reference, I put the logs from my experiments in `./logs`.
+
+* `02_train.sh_xx.log.txt`: training log by running `02_train.sh`
+* `03_get_score.sh_xx.log.txt`: evaluation log by running `03_get_score.sh`
+
+
+Note
+1. Log of a single run is `./logs`. You can run multiple times by changing the random seed (see the next point note)
+2. In `02_train.sh_xx.log.txt`, the EERs on the development set are reported after each training epoch. The last row is the EERs on the evaluation set.
+3. The training log of L3c and other systems show EERs like `SASVEER: 14.35, ASVEER: 39.01, CMEER: 0.07` even in the last traing epoch. However, at the end, the EERs become `SASVEER: 1.42, ASVEER: 1.92, CMEER: 1.14`.
+   * The high EERs from each each training epoch are EERs measured on the development set data. The SASV scores are fused in the same way as the baseline B1 (i.e., no calibration, no non-linear LLR fusion). See [this line of code](https://github.com/nii-yamagishilab/SpeechSPC-mini/blob/06dc1cbe28992b5c37f50cf2bb70f83d47c9a5d1/proj-01-score-fusion-cda-llr/L3c/model.py#L772). By doing so, we make sure that the training process of L3c and other systems are EXACTLY the same as B1. You can compare the EERs in `logs/02_train.sh_L3c.log.txt` and `logs/02_train.sh_B1.log.txt`. 
+   * It is only when scoring the evaluation set that the proposed fusion is used. That's why the last EER "droppped" significantly
+   * This is merely for controlling the factors in experiments. 
 
 **Change random seed**
 

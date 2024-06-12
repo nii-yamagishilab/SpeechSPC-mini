@@ -6,7 +6,7 @@ This is the code repository hosting a few projects related to speech security an
 
 This repository is maintained by [Xin Wang](http://tonywangx.github.io/), for [JST PRESTO project](https://tonywangx.github.io/presto.html) *Unified Framework for Speech Privacy Protection and Fake Voice Detection*.
 
-<p align="center">
+<p align="left">
   <img src="https://tonywangx.github.io/_images/figure_presto.jpg" width="600px" alt="Project Logo"/>
 </p>
 
