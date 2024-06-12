@@ -6,7 +6,7 @@ This is the code repository hosting a few projects related to speech security an
 
 This repository is maintained by [Xin Wang](http://tonywangx.github.io/), for [JST PRESTO project](https://tonywangx.github.io/presto.html) *Unified Framework for Speech Privacy Protection and Fake Voice Detection*.
 
-<p align="center">
+<p align="left">
   <img src="https://tonywangx.github.io/_images/figure_presto.jpg" width="600px" alt="Project Logo"/>
 </p>
 
@@ -19,7 +19,7 @@ XW is a beginner in this field. Please feel free to give suggestions and feedbac
 
 ### 1. Score-level fusion for spoofing-aware ASV
 
-<p align="center">
+<p align="left">
   <img src="https://github.com/TonyWangX/TonyWangX.github.io/blob/9c46ee65c8ca0a34f16c926c87661b682aaaba31/code/source/pic/llr_fusion.png?raw=true" width="300px" alt="Project Logo"/>
 </p>
 
@@ -37,9 +37,9 @@ Summary:
     * Please follow `README` in the folder and run the code
     
 * Other resources:
-    * Proof of the theory related to Bayesian decision cost (link to be inserted)
-    * Tutorial notebook on fusion of simulated data (link to be inserted)
-    * Tutorial notebook on evaluation metrics (t-EER, cllr, and so on)
+    * Proof of the theory related to Bayesian decision cost [here](https://www.dropbox.com/scl/fo/ykbnw4t8u09vbl9zyir4l/APrQUbOPPIQSHGpnLtdem3o/misc/is2024-sasv.pdf?rlkey=1at87m1q157rlcx4jo933pxeb)
+    * Tutorial notebook on fusion of simulated data (to be added)
+    * Tutorial notebook on evaluation metrics (to be added)
 
 Please consider citing the paper if you find the above materials useful
 ```bibtex
