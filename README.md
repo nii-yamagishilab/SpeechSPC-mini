@@ -19,8 +19,8 @@ XW is a beginner in this field. Please feel free to give suggestions and feedbac
 
 ### 1. Score-level fusion for spoofing-aware ASV
 
-<p align="center">
-  <img src="https://github.com/TonyWangX/TonyWangX.github.io/blob/9c46ee65c8ca0a34f16c926c87661b682aaaba31/code/source/pic/llr_fusion.png?raw=true" width="300px" align="left" alt="Project Logo"/>
+<p align="left">
+  <img src="https://github.com/TonyWangX/TonyWangX.github.io/blob/9c46ee65c8ca0a34f16c926c87661b682aaaba31/code/source/pic/llr_fusion.png?raw=true" width="300px" alt="Project Logo"/>
 </p>
 
 This project is for an Interspeech 2024 paper: 
