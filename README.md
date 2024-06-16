@@ -38,7 +38,7 @@ Summary:
     
 * Other resources:
     * Proof of the theory related to Bayesian decision cost [here](https://www.dropbox.com/scl/fo/ykbnw4t8u09vbl9zyir4l/APrQUbOPPIQSHGpnLtdem3o/misc/is2024-sasv.pdf?rlkey=1at87m1q157rlcx4jo933pxeb)
-    * Tutorial notebook on fusion of simulated data (to be added)
+    * Tutorial notebook on fusion  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1D9YZLkSTwXkZGnZAtLpl-1w9ZG2hUxOY?usp=sharing)
     * Tutorial notebook on evaluation metrics (to be added)
 
 Please consider citing the paper if you find the above materials useful
