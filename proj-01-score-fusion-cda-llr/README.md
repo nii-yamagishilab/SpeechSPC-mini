@@ -15,7 +15,7 @@ Xin Wang, Tomi Kinnunen, Lee Kong Aik, Paul-Gauthier Noe, and Junichi Yamagishi.
 
 ## To do
 - [ ] More documentation on the code
-- [ ] Tutorial notebooks on fusion and evaluation metrics
+- [ ] Tutorial notebooks on evaluation metrics
 
 
 ## Resources
@@ -23,7 +23,7 @@ Xin Wang, Tomi Kinnunen, Lee Kong Aik, Paul-Gauthier Noe, and Junichi Yamagishi.
 * Appendix on the proof of the theory related to Bayesian decision cost can be found [here](https://www.dropbox.com/scl/fo/ykbnw4t8u09vbl9zyir4l/APrQUbOPPIQSHGpnLtdem3o/misc/is2024-sasv.pdf?rlkey=1at87m1q157rlcx4jo933pxeb)
   * This appendix explains how the optimal score fusion w.r.t a specific Bayesian decision cost is derived.
   * It is based on my beginner's point of view on the theory. It should be easy to digest.
-* Tutorial demo on fusion of simulated data can be found here (to be added)
+* Tutorial demo on fusion of simulated data can be found [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1D9YZLkSTwXkZGnZAtLpl-1w9ZG2hUxOY?usp=sharing)
 * Tutorial on evaluation metrics (t-EER, cllr, and so on) can be found here (to be added)
 
 ## Python environment
