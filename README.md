@@ -37,7 +37,7 @@ Summary:
     * Please follow `README` in the folder and run the code
     
 * Other resources:
-    * Proof of the theory related to Bayesian decision cost [here](https://www.dropbox.com/scl/fo/ykbnw4t8u09vbl9zyir4l/APrQUbOPPIQSHGpnLtdem3o/misc/is2024-sasv.pdf?rlkey=1at87m1q157rlcx4jo933pxeb)
+    * Proof of the theory related to Bayesian decision cost on [Arxiv](https://arxiv.org/abs/2406.10836)
     * Tutorial notebook on fusion  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1D9YZLkSTwXkZGnZAtLpl-1w9ZG2hUxOY?usp=sharing)
     * Tutorial notebook on evaluation metrics (to be added)
 
